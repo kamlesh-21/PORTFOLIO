@@ -1,5 +1,4 @@
-import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import React from 'react'
 import Header from './components/Header';
 import Intro from './components/Intro';
 import Services from './components/Services';
@@ -7,26 +6,24 @@ import About from './components/About';
 import Work from './components/Work';
 import Footer from './components/Footer';
 import PortfolioItem from './components/PortfolioItem';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 
 function App() {
-  return (
-    <>
-        <h2>test</h2>
-    <Router>
-      <Header />
-      <Switch>
-        <Route exact path="/" component={Intro} />
-        <Route path="/services" component={Services} />
-        <Route path="/about" component={About} />
-        <Route exact path="/work" component={Work} />
-        <Route path="/work/:id" component={PortfolioItem} />
-      </Switch>
-      <Footer />
-    </Router>
-    
-    </>
 
-  );
+  return (
+    <BrowserRouter>
+      <Header />
+      <Routes>
+        <Route exact path="/" element={<Intro />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/about" element={<About />} />
+        <Route exact path="/work" element={<Work />} />
+        <Route path="/work/:id" element={<PortfolioItem />} />
+      </Routes>
+      <Footer />
+    </BrowserRouter>
+   
+    )
 }
 
-export default App;
+export default App

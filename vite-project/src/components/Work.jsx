@@ -12,7 +12,7 @@ const Work = () => {
           <img src="img/oldagram-square.png" alt="" className="portfolio__img" />
         </Link>
         <Link to="/work/2" className="portfolio__item">
-          <img src="img/tenzies.jpg" alt="" className="portfolio__img" />
+         <img src="img/tenzies.jpg" alt="" className="portfolio__img" />
         </Link>
         <Link to="/work/3" className="portfolio__item">
           <img src="img/password-generator.jpg" alt="" className="portfolio__img" />
