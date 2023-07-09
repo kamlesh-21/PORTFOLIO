@@ -14,7 +14,6 @@ const Services = () => {
           <p>I am a versatile frontend developer with a specialty in React JS and Tailwind CSS. I also have a solid grip on the fundamentals of web development using HTML, CSS, and JavaScript.</p>
         </div>
       </div>
-      <a href="#work" className="btn">My Projects</a>
     </section>
   );
 };

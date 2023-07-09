@@ -63,6 +63,7 @@ header {
   padding: 1em;
   background-color: var(--color-dark);
   color: var(--color-light);
+  position: relative; /* Add this line */
 }
 
 .logo img {
@@ -74,12 +75,17 @@ header {
   background: none;
   border: none;
   cursor: pointer;
+  position: absolute; /* Add this line */
+  top: 1em;
+  bottom: 1em; /* Adjust the top value as needed */
+  right: 4em; /* Adjust the right value as needed */
+  z-index: 2;
 }
 
 .nav-toggle .hamburger {
   position: relative;
   width: 25px;
-  height: 3px;
+  height: 1px;
   background-color: var(--color-light);
   transition: transform 250ms ease-in-out;
 }
@@ -91,7 +97,7 @@ header {
   width: 25px;
   height: 3px;
   background-color: var(--color-light);
-  transition: transform 250ms ease-in-out;
+  transition: transform 20ms ease-in-out;
 }
 
 .nav-toggle .hamburger::before {
@@ -139,20 +145,21 @@ header {
 /* Intro section */
 .intro {
   text-align: center;
-  padding: 4rem 2rem;
+  padding: 2rem;
   background-color: var(--color-light);
 }
 
 .section__title {
   font-size: 3rem;
   font-weight: bold;
+  margin-bottom: 1rem;
 }
 
 .section__subtitle {
   font-size: 1.8rem;
   font-weight: bold;
   color: var(--color-primary);
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .intro__img {
@@ -165,6 +172,8 @@ header {
   color: var(--color-light);
   text-align: center;
   padding: 4rem 2rem;
+  background-image: url(../img/services-bg2.jpg);
+  background-size: cover;
 }
 
 .section__title--services {
@@ -210,6 +219,7 @@ header {
   padding: 4rem 2rem;
   background-color: var(--color-dark);
   color: var(--color-light);
+  z-index: -2;
 }
 
 .section__title--work {
@@ -292,6 +302,8 @@ header {
     width: 70%;
     padding: 4rem 2rem;
     transition: right 250ms ease-in-out;
+    right: -100%;
+
   }
   
   .nav-open .nav__list {
