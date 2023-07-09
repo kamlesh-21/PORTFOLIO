@@ -20,10 +20,13 @@ function App() {
         <Route exact path="/work" element={<Work />} />
         <Route path="/work/:id" element={<PortfolioItem />} />
       </Routes>
+      <About />
+      <Services />
+      <Work />
       <Footer />
     </BrowserRouter>
    
     )
 }
 
-export default App
+export default App 
