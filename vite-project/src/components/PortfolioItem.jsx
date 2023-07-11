@@ -18,7 +18,7 @@ const PortfolioItem = () => {
     <div>
       <section className="intro portfolio-intro">
         <h1 className="section__title section__title--intro">Project {id} : {project.name}</h1>
-        <p className="section__subtitle section__subtitle--intro">HTML & CSS</p>
+        <p className="section__subtitle section__subtitle--intro">{project.techStack}</p>
         <img src={project.image} alt="" className="intro__img" />
       </section>
 
@@ -31,14 +31,11 @@ const PortfolioItem = () => {
             <i className="fas fa-eye"></i> Live version
           </a>
         </div>
-        <p>{project.description}</p>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vel ex a tellus rhoncus tempus vel id justo. Ut vel
-          sem nec odio pretium bibendum.
+          {project.intro}
         </p>
         <p>
-          Quisque at nisi nulla. Sed faucibus tellus a mi scelerisque commodo. Donec non mauris vitae lorem sodales fermentum.
-          Phasellus in turpis id turpis finibus elementum.
+          {project.description}
         </p>
       </div>
     </div>

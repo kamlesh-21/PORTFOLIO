@@ -26,6 +26,15 @@ const Work = () => {
         <Link to="/work/6" className="portfolio__item">
           <img src="img/experiences.png" alt="" className="portfolio__img" />
         </Link>
+        <Link to="/work/7" className="portfolio__item">
+          <img src="img/color-picker-main.jpg" alt="" className="portfolio__img" />
+        </Link>
+        <Link to="/work/8" className="portfolio__item">
+          <img src="img/restaurant-menu.jpg" alt="" className="portfolio__img" />
+        </Link>
+        <Link to="/work/9" className="portfolio__item">
+          <img src="img/twitter.jpg" alt="" className="portfolio__img" />
+        </Link>
       </div>
     </section>
   );
