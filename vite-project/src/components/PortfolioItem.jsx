@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import projectData from '../ProjectData'; 
+import projectData from '../ProjectData';
+import {FaGithub} from 'react-icons/fa';
 
 
 const PortfolioItem = () => {
@@ -15,7 +16,7 @@ const PortfolioItem = () => {
   }
 
   return (
-    <div>
+    <div className="portfolio-main">
       <section className="intro portfolio-intro">
         <h1 className="section__title section__title--intro">Project {id} : {project.name}</h1>
         <p className="section__subtitle section__subtitle--intro">{project.techStack}</p>
@@ -25,7 +26,7 @@ const PortfolioItem = () => {
       <div className="portfolio-item-individual">
         <div>
           <a className="" target="_blank" href={project.githubLink}>
-            <i className="fab fa-github"></i> GitHub Repo
+            <i className="fab fa-github">{<FaGithub />}</i> GitHub Repo
           </a>
           <a className="" target="_blank" href={project.liveLink}>
             <i className="fas fa-eye"></i> Live version

@@ -89,7 +89,36 @@ const projectData = [
       liveLink: 'https://helpful-panda-1d5db6.netlify.app/',
       githubLink: 'https://github.com/kamlesh-21/twitter_clone',
     },
-    // Add more projects as needed
+    {
+      id: 10,
+      image: '../img/tagurl.png',
+      name: 'TagURL - Browser Extension',
+      intro: 'The TagURL project allows users to save and organize their favorite website URLs along with associated tags. It provides a simple interface to save URLs, add tags, and remove saved entries. Users can also delete all saved data at once.',
+      description: 'The project is built as a browser extension using HTML, CSS, and JavaScript. It leverages the Chrome Extension API (chrome.tabs.query) to capture the active tab"s URL and the user"s input for the associated tag. The saved URL and tag are stored as an object in the myLeads array, which is then stored in the browser"s local storage using localStorage.setItem(). The saved entries are rendered on the page, displaying the URL, tag, and a remove button for each entry. Users can remove individual entries by clicking the "Remove" button, which updates the myLeads array and local storage accordingly. Additionally, users can delete all saved data by double-clicking the "Delete All" button.', 
+      techStack: 'JavaScript, HTML, CSS, Chrome Extension API',
+      liveLink: 'https://helpful-panda-1d5db6.netlify.app/',
+      githubLink: 'https://github.com/kamlesh-21/TagURL',
+    },
+    {
+      id: 11,
+      image: '../img/movie_watchlist.jpg',
+      name: 'Movie Watchlist',
+      intro: 'This Movie Watchlist project allows users to search for movies using the Open Movie Database (OMDb) API and add them to their watchlist. It provides information about the movies such as title, poster, IMDb rating, runtime, genre, and plot. Users can add movies to their watchlist and remove them if desired.',
+      description: 'The project is built using HTML, CSS, and JavaScript. It utilizes the OMDb API to fetch movie data based on user search input. The fetched movie data is then stored in the moviesArray and rendered on the page. The user can add movies to their watchlist by clicking the "Add to Watchlist" button, and the movie is stored in the watchlistArray and in the browser"s local storage. If a movie is already in the watchlist, the user is alerted with a message. The user can also remove movies from the watchlist by clicking the "Remove from Watchlist" button, which updates the watchlistArray and local storage accordingly.', 
+      techStack: 'JavaScript, HTML, CSS, OMDb API API ',
+      liveLink: 'https://remarkable-7d47ea.netlify.app/',
+      githubLink: 'https://github.com/kamlesh-21/Movie_Watchlist',
+    },
+    {
+      id: 12,
+      image: '../img/learning_journal.jpg',
+      name: 'Learning Journal',
+      intro: 'portfolio styled journal replete with blogs and portfolio',
+      description: ' The HTML structure consists of a head section containing the document title, CSS stylesheets, and fonts. The body section includes a header with a navigation menu, a featured article with an image, title, and content, and a main section with recent articles displayed in a container. The main section also includes a sidebar with widgets displaying information about the author and projects. Finally, a footer is present at the bottom of the page with copyright information.', 
+      techStack: ' HTML, CSS,  Google Fonts (Quicksand), static web pages.',
+      liveLink: 'https://learning-journal-aside.netlify.app/',
+      githubLink: 'https://github.com/kamlesh-21/my-learning-journal',
+    },
   ];
   
   export default projectData;

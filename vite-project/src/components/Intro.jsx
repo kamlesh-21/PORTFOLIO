@@ -15,7 +15,5 @@ export default function Intro() {
           <SkillCards />
       </div>
     </>
- 
-
   );
 };

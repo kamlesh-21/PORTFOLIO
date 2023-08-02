@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import ViteImage from "/img/vite.svg"; // Update the path to the Vite image
+import ViteImage from "/img/vite.svg";
 
 const About = () => {
   const [isFlipped, setIsFlipped] = useState(false);

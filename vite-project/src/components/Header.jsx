@@ -20,7 +20,6 @@ export default function Header() {
       <button className={`nav-toggle ${isMenuOpen ? 'nav-open' : ''}`} aria-label="toggle navigation" onClick={handleMenuToggle}>
         <span className="hamburger"></span>
       </button>
-
       <nav className={`nav ${isMenuOpen ? 'nav-open' : ''}`}>
         <ul className="nav__list">
           <li className="nav__item">

@@ -2,8 +2,7 @@ import React from 'react';
 import {FaTwitter} from 'react-icons/fa';
 import {FaLinkedin} from 'react-icons/fa';
 import {FaGithub} from 'react-icons/fa';
-import ViteImage from "/img/vite.svg"; // Update the path to the Vite image
-
+import ViteImage from "/img/vite.svg"; 
 
 const Footer = () => {
   return (
