@@ -306,8 +306,9 @@ header {
   background-color: var(--color-dark);
   color: var(--color-light);
   text-align: center;
-  padding: 4rem 2rem;
+  padding: 3rem 2rem;
   background-image: url(../img/services-bg.jpg);
+  filter: brightness(70%);
   background-size: cover;
 }
 
@@ -315,18 +316,50 @@ header {
   color: var(--color-light);
 }
 
+/* Styling for each service container */
 .services {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-bottom: 4rem;
-  margin-top: 2.4rem;
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+
 }
 
+/* Styling for each individual service */
 .service {
-  max-width: 400px;
-  margin: 2rem auto 2rem;
-  font-size: 1.1rem;
+  flex-basis: 48%;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 2rem;
+}
+
+/* Styling for service headings */
+.service h3 {
+  font-size: 1.7em;
+  padding: 1rem;
+  background-image: linear-gradient(to right, var(--color-primary), var(--color-dark));
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Styling for paragraphs inside services */
+.service p {
+  font-size: 16px;
+  color: var(--color-light);
+  margin-bottom: 20px;
+}
+
+/* Styling for the unordered list inside the Marketing Services */
+.service ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+/* Styling for the list items inside the Marketing Services */
+.service li {
+  font-size: 16px;
+  color: var(--color-primary);
+  margin-bottom: 5px;
 }
 
 /* About section */
