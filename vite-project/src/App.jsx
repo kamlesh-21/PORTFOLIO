@@ -16,10 +16,11 @@ function App() {
       <Routes>
         <Route path="/" element={<Intro />} />
         <Route path="/services" element={<Services />} />
-        <Route path="/about" element={<About />} />
         <Route path="/work" element={<Work />} />
         <Route path="/work/:id" element={<PortfolioItem />} />
       </Routes>
+      <Work />
+      <About />
       <Footer />
     </BrowserRouter>
   );

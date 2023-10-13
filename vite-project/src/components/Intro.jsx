@@ -11,9 +11,9 @@ export default function Intro() {
         <p class="section__subtitle section__subtitle--intro">Front-End Developer</p>
         <img src="img/kamleshkumar_three.png" alt="portrait picture of kamlesh" class="intro__img" />
       </section>
-      <div className="skill-cards-container">
+      {/* <div className="skill-cards-container">
           <SkillCards />
-      </div>
+      </div> */}
     </>
   );
 };

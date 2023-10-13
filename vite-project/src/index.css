@@ -391,7 +391,6 @@ header {
 .my-work {
   text-align: center;
   padding: 4rem 2rem;
-  background-color: var(--color-dark);
   color: var(--color-light);
   z-index: -2;
 }
