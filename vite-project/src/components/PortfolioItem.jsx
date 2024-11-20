@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import projectData from '../ProjectData';
+import projectData from '../projectData';
 import {FaGithub} from 'react-icons/fa';
 
 

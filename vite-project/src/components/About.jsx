@@ -1,36 +1,66 @@
-import React, { useState } from 'react';
-import ViteImage from "/img/vite.svg";
+import React from 'react';
 
 const About = () => {
-  const [isFlipped, setIsFlipped] = useState(false);
-
-  const handleFlip = () => {
-    setIsFlipped(!isFlipped);
-  };
-
-  const backgroundImage = isFlipped ? 'url("./img/services-bg5.jpg")' : 'url("./img/services-bg7.jpg")';
-
   return (
-    <section className="about-me" id="about">
-      <h2 className="section__title section__title--about">Who I am</h2>
-      <div className="about-me-section-two" style={{ backgroundImage }}>
-        <h3 className="section__subtitle section__subtitle--work"> Crafting Compelling User Experiences with <img className="vite-logo" src={ViteImage} alt="Vite" />React JS</h3>
-        <button className="button-image" onClick={handleFlip}>
-          <div className="button-content">
-            <img className="vite-logo" src={ViteImage} alt="Vite" />
-            <span className="button-text">Flip the Image</span>
+    <div className="max-w-4xl mx-auto">
+      <h1 className="text-4xl font-bold mb-8">About Kamlesh Kumar</h1>
+      <div className="bg-white shadow-lg rounded-lg p-8">
+        <div className="mb-8">
+          <h2 className="text-2xl font-bold mb-4">Professional Summary</h2>
+          <p className="text-gray-600">
+            I am a Business Generalist with over 18 years of experience in diverse sectors, including hospitality, technology, and consulting. I have a unique blend of expertise in hotel management, strategic planning, and digital transformation, enabling me to drive business growth and deliver innovative solutions.
+          </p>
+        </div>
+        <div className="mb-8">
+          <h2 className="text-2xl font-bold mb-4">Education</h2>
+          <ul className="list-disc pl-6">
+            <li>LLB (Hons), Law Graduate - Dhanbad Law College, BBMKU (2021-2024)</li>
+            <li>B.Sc in Hotel Management - IHM, Mumbai, NCHMCT (2002-2005)</li>
+          </ul>
+        </div>
+        <div className="mb-8">
+          <h2 className="text-2xl font-bold mb-4">Certifications</h2>
+          <ul className="list-disc pl-6">
+            <li>CS50x - Introduction to Computer Science, Harvard University & edX (2021-2022)</li>
+            <li>Front-End Development, Scrimba (2021-2023)</li>
+            <li>React and Advanced React JS, Scrimba (2023)</li>
+            <li>AI Engineering, Scrimba (2023)</li>
+          </ul>
+        </div>
+        <div>
+          <h2 className="text-2xl font-bold mb-4">Technical and Business Skills</h2>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            <div>
+              <h3 className="text-lg font-bold mb-2">Technical Skills</h3>
+              <ul className="list-disc pl-6">
+                <li>JavaScript, Python, Django, Flask</li>
+                <li>React JS, Node.js, Express.js</li>
+                <li>MongoDB, SQLite</li>
+                <li>Git, API Integrations, Headless CMS</li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-lg font-bold mb-2">Business Skills</h3>
+              <ul className="list-disc pl-6">
+                <li>Hotel Management</li>
+                <li>Sales and Marketing Strategy</li>
+                <li>Team Leadership and Management</li>
+                <li>Strategic Planning and Business Development</li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-lg font-bold mb-2">AI/ML Skills</h3>
+              <ul className="list-disc pl-6">
+                <li>Generative AI</li>
+                <li>RAG methodologies</li>
+                <li>Embeddings</li>
+                <li>Fine-tuning</li>
+              </ul>
+            </div>
           </div>
-        </button>
+        </div>
       </div>
-      <div className="about-me__body">
-        <p> I'm a passionate web developer and designer based in India with expertise in React JS, JavaScript, Responsive Design, and Styled Components. Alongside a Certificate in Frontend Development, I've completed Harvard University's Introduction to Computer Science (CS50x). My professional background spans Hospitality Operations and Digital Marketing. As an IT and marketing consultant, I've assisted start-ups with web development and product marketing, enhancing user experience through content management and social media marketing.</p>
-        <p> My expertise extends to the hospitality industry, where I have spent several years in various roles, including restaurant operations, event sales, hotel sales, and restaurant marketing. Furthermore, I have ventured into entrepreneurship with a b2b hotel and restaurant supplies drop-shipping firm, gaining valuable insights into content marketing and social media marketing.</p> 
-        <p>Driven by an unwavering passion to learn and innovate, I'm determined to make a positive impact through web development, marketing, and tackling new challenges. My diverse skill set and entrepreneurial spirit enable me to thrive in the ever-changing digital landscape. Let's collaborate to achieve your business objectives and create exceptional user experiences.</p>
-      </div>
-
-      <a href="/CV_Kumar_ Front _End_Developer.docx" className="button-image" download>Download Resume</a>
-
-    </section>
+    </div>
   );
 };
 
