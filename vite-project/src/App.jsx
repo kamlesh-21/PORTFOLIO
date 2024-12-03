@@ -1,59 +1,134 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes,  Route, Link } from 'react-router-dom';
-import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
-import Home from './components/Home';
-import About from './components/About';
-import WorkExperience from './components/WorkExperience';
-import Work from './components/work';
-import PortfolioItem from './components/portfolioItem';
-import Contact from './components/Contact';
+import React, { useState, useEffect } from 'react';
+import { ChevronUp, Download, Github, Linkedin } from 'lucide-react';
 
 const App = () => {
+  const [showGoToTop, setShowGoToTop] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowGoToTop(window.scrollY > 300);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const downloadResume = () => {
+    alert('Resume download functionality to be implemented');
+  };
+
   return (
-    <Router>
-      <div className="flex flex-col min-h-screen font-sans">
-        <header className="bg-gray-800 text-white py-4 px-6 shadow-lg">
-          <nav className="flex justify-between items-center">
-            <div className="text-2xl font-bold">
-              <Link to="/">Kamlesh Kumar</Link>
+    <div className="min-h-screen bg-gray-100 font-sans text-gray-800">
+      {/* Navigation */}
+      <header className="fixed top-0 left-0 w-full bg-blue-900 text-white z-50">
+        <nav className="container mx-auto flex justify-between items-center p-4">
+          <div className="text-2xl font-bold">YN</div>
+          
+          {/* Mobile Menu Toggle */}
+          <div 
+            className="md:hidden cursor-pointer"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            <div className="space-y-1.5">
+              <div className="w-6 h-0.5 bg-white"></div>
+              <div className="w-6 h-0.5 bg-white"></div>
+              <div className="w-6 h-0.5 bg-white"></div>
             </div>
-            <ul className="flex space-x-6">
-              <li><Link to="/about">About</Link></li>
-              <li><Link to="/work-experience">Work Experience</Link></li>
-              <li><Link to="/work">My Work</Link></li>
-              <li><Link to="/contact">Contact</Link></li>
-            </ul>
-          </nav>
-        </header>
-
-        <main className="flex-1 py-12 px-6">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/work-experience" element={<WorkExperience />} />
-            {/* <Route path="/resume" element={<Resume />} /> */}
-            <Route path="/work" element={<Work />} />
-            <Route path="/work/:id" element={<PortfolioItem />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
-        </main>
-
-        <footer className="bg-gray-800 text-white py-4 px-6 text-center shadow-inner">
-          <div className="flex justify-center space-x-4">
-            <a href="https://github.com/kamlesh-21" target="_blank" rel="noopener noreferrer">
-              <FaGithub size={24} />
-            </a>
-            <a href="https://www.linkedin.com/in/kamlesh-kumar-2a403321b/" target="_blank" rel="noopener noreferrer">
-              <FaLinkedin size={24} />
-            </a>
-            <a href="mailto:kamlesh.kumar21@gmail.com">
-              <FaEnvelope size={24} />
-            </a>
           </div>
-          <p className="mt-2">© 2023 Kamlesh Kumar. All rights reserved.</p>
-        </footer>
-      </div>
-    </Router>
+
+          {/* Navigation Links */}
+          <ul className={`
+            md:flex space-x-4 
+            ${isMobileMenuOpen 
+              ? 'absolute top-full left-0 w-full bg-blue-900 flex flex-col items-center py-4' 
+              : 'hidden md:flex'}`}
+          >
+            {['About', 'Skills', 'Experience', 'Projects', 'Contact'].map(section => (
+              <li key={section} className="hover:text-yellow-400 transition">
+                <a href={`#${section.toLowerCase()}`}>{section}</a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </header>
+
+      {/* Main Content */}
+      <main className="container mx-auto mt-20 p-4">
+        {/* Hero Section */}
+        <section 
+          id="about" 
+          className="text-center bg-blue-700 text-white p-12 rounded-lg shadow-lg mb-8"
+        >
+          <h1 className="text-4xl font-bold mb-2">YOUR NAME</h1>
+          <h2 className="text-xl mb-4 text-yellow-300">Professional Title</h2>
+          <p className="max-w-xl mx-auto mb-6">
+            Brief professional tagline that captures your essence
+          </p>
+
+          <div className="flex justify-center space-x-4 mb-4">
+            <button 
+              onClick={downloadResume} 
+              className="bg-yellow-500 text-blue-900 px-4 py-2 rounded flex items-center hover:bg-yellow-600"
+            >
+              <Download className="mr-2" /> Download Resume
+            </button>
+            <button 
+              onClick={() => window.open('https://linkedin.com', '_blank')}
+              className="bg-blue-800 px-4 py-2 rounded flex items-center hover:bg-blue-700"
+            >
+              <Linkedin className="mr-2" /> LinkedIn
+            </button>
+            <button 
+              onClick={() => window.open('https://github.com', '_blank')}
+              className="bg-gray-800 px-4 py-2 rounded flex items-center hover:bg-gray-700"
+            >
+              <Github className="mr-2" /> GitHub
+            </button>
+          </div>
+        </section>
+
+        {/* Skills Section */}
+        <section id="skills" className="mb-8">
+          <h2 className="text-2xl font-bold text-blue-900 mb-4">Skills</h2>
+          <div className="grid md:grid-cols-3 gap-4">
+            {[
+              { title: 'Technical Skills', description: 'Programming, Frameworks' },
+              { title: 'Soft Skills', description: 'Leadership, Communication' },
+              { title: 'Domain Expertise', description: 'Industry Knowledge' }
+            ].map(skill => (
+              <div 
+                key={skill.title} 
+                className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition"
+              >
+                <h3 className="text-xl text-blue-700 mb-2">{skill.title}</h3>
+                <p>{skill.description}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      </main>
+
+      {/* Go to Top Button */}
+      {showGoToTop && (
+        <button 
+          onClick={scrollToTop}
+          className="fixed bottom-6 right-6 bg-blue-900 text-white w-12 h-12 rounded-full 
+                     flex items-center justify-center hover:bg-blue-700 transition z-50"
+        >
+          <ChevronUp />
+        </button>
+      )}
+
+      {/* Footer */}
+      <footer className="text-center py-4 bg-blue-900 text-white">
+        <p>&copy; 2024 Your Name | All Rights Reserved</p>
+      </footer>
+    </div>
   );
 };
 
