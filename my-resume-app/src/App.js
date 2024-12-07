@@ -75,6 +75,7 @@ const App = () => {
     {
       title: 'Sales and Marketing Consultant',
       company: 'iRasus Technologies Pvt Ltd and Others',
+      image:'./img/logos/irasus.jpg',
       period: 'Remote | Part Time | May 2020 - Present',
       responsibilities: [
         'Provided consulting services into lead generation, sales planning, digital marketing and social media management',
@@ -86,6 +87,7 @@ const App = () => {
     },
     {
       title: 'Program Manager',
+      image:'./img/logos/tlc.jpg',
       company: 'TLC Relationship Management P Ltd',
       period: 'Bangalore & Kolkata | Dec 2018 - Apr 2020',
       responsibilities: [
@@ -98,6 +100,7 @@ const App = () => {
     },
     {
       title: 'Senior Manager - Inside Sales, Activations & Online Hotel Booking Operations',
+      image:'./img/logos/little.jpg',
       company: 'Little Internet Pvt Ltd',
       period: 'Bangalore | May 2015 - Sep 2018',
       responsibilities: [
@@ -109,6 +112,7 @@ const App = () => {
     },
     {
       title: 'Business Partner',
+      image:'./img/logos/route.jpg',
       company: 'Route Infinity (Travel Startup)',
       period: 'Chandigarh | Nov 2011 - Nov 2014',
       responsibilities: [
@@ -120,6 +124,7 @@ const App = () => {
     },
     {
       title: 'Assistant Manager - Marketing and Sales',
+      image:'./img/logos/mars.jpg',
       company: 'Mars Restaurants Pvt Ltd',
       period: 'Mumbai | Jan 2008 - Oct 2011',
       responsibilities: [
@@ -186,160 +191,160 @@ const App = () => {
     {
       id: 1,
       image: '../img/yatramaker promo 2.jpg',
-      name: 'Full-Stack Travel Recommendation App',
-      intro: 'YatraMaker is an innovative platform that redefines travel planning by focusing on user budgets, offering tailored destination recommendations and comprehensive itineraries.',
-      description: 'The platform"s frontend leverages React, ensuring a dynamic and intuitive interface, while the backend, powered by Node.js with Express, facilitates efficient server-side operations. A MongoDB database supports scalable data management for destinations and pricing details. RESTful APIs enable smooth client-server communication, ensuring real-time updates and data synchronization. Advanced algorithms drive key features, such as optimizing trip durations, dynamically estimating costs based on user preferences, and intelligent pricing models.',
-      techStack: 'MongoDB, Express, React, Node.js, JotForm, Contentful',
+      name: "Full-Stack Travel Recommendation App",
+      intro: "YatraMaker revolutionizes travel planning by recommending destinations and itineraries based on user budgets and preferences.",
+      description: "A full-stack platform leveraging React for dynamic interfaces and Node.js for server-side operations. MongoDB handles scalable data management, while RESTful APIs ensure seamless client-server communication. Advanced algorithms optimize trip durations, estimate costs, and enhance user experiences.",
+      techStack: "React, Node.js, Express, MongoDB, JotForm, Contentful",
       liveLink: 'https://yatramaker.com',
       githubLink: 'https://github.com/kamlesh-21/travel-app'
     },
     {
       id: 2,
       image: '../img/mid3a.png',
-      name: 'AI Image Generation App',
-      intro: 'An innovative solution for generating AI-driven images, designed to transform ideas into visually stunning outputs for creative industries and businesses.',
-      description: 'An innovative solution designed to transform text prompts into visually stunning images using advanced AI technology. Built with React, the app ensures a seamless and interactive user experience, while Hugging Face models power its sophisticated text-to-image generation capabilities. The backend leverages AI pipelines to efficiently process data and render high-quality outputs. Robust hosting solutions are implemented to ensure scalability, reliability, and performance.',
-      techStack: 'React, Hugging Face, AI Models',
+      name: "AI Image Generation App",
+      intro: "A text-to-image generation app that turns creative ideas into visually stunning outputs using advanced AI models.",
+      description: "Built with React for interactive UI, the app integrates Hugging Face models for high-quality image generation. AI pipelines process inputs efficiently, ensuring scalability and reliability for creative users. Ideal for transforming text prompts into visuals seamlessly.",
+      techStack: "React, Hugging Face, AI Models",
       liveLink: 'https://tryphoto.netlify.app',
       githubLink: 'https://github.com/kamlesh-21/ai-image-gen'
     },
     {
       id: 3,
       image: '../img/mid3a.png',
-      name: 'RAG-Based Hotel AI Chatbot',
-      intro: 'AI-powered chatbot seamlessly chats with you in over 36 languages.It can even handle reservations and bookings, all in your natural language.',
-      description: 'This innovative project leverages cutting-edge technologies like generative AI, retrieval augmentation, and fine-tuned LLMs from Hugging Face, OpenAI, LangChain, and SupaBase to create a truly helpful and personalized hotel experience. The system employs generative AI frameworks with Retrieval-Augmented Generation (RAG) techniques it deliver highly contextual and precise responses. By using vector embeddings, the platform enhances search accuracy, making hotel operations smoother.',
-      techStack: 'generative AI, retrieval augmentation, Hugging Face, OpenAI, LangChain, and SupaBase',
+      name: "RAG-Based Hotel AI Chatbot",
+      intro: "AI chatbot offering multilingual conversations, handling reservations, and providing personalized services for hotels.",
+      description: "Combines retrieval augmentation, generative AI, and fine-tuned LLMs for tailored responses. Built with Hugging Face, LangChain, and Supabase, the system uses vector embeddings to enhance precision and streamline hotel operations.",
+      techStack: "Generative AI, Hugging Face, LangChain, OpenAI, Supabase",
       liveLink: 'https://ihobo.netlify.app/',
       githubLink: 'https://github.com/kamlesh-21/hotel-ai-system'
     },
     {
       id: 4,
       image: '../img/bhh1.jpg',
-      name: 'Hotel Consulting Website',
-      intro: 'A dynamic platform for hotel consulting services, enabling businesses to showcase offerings and publish insights through a user-friendly website.',
-      description: 'A dynamic and user-friendly website created for hotel consulting services, enabling businesses to showcase their offerings and insights effectively. Developed with React, the site delivers a high-performing and responsive interface. A headless CMS is integrated to allow effortless updates to blogs and catalogs. The Context API ensures efficient state management and smooth navigation throughout the platform. Built with scalability in mind, the website is ready to accommodate future growth and additional features.',
-      techStack: 'React, Headless CMS, Context API',
+      name: "Hotel Consulting Website",
+      intro: "A consulting website designed to showcase hotel services and publish industry insights dynamically.",
+      description: "Developed using React, the platform offers a responsive interface, integrates a headless CMS for seamless updates, and uses Context API for state management. Scalable architecture ensures future growth and easy navigation.",
+      techStack: "React, Headless CMS, Context API",
       liveLink: 'https://bhargavihospitality.netlify.app/',
       githubLink: 'https://github.com/kamlesh-21/hotel-consulting-site'
     },
     {
       id: 5,
       image: '../img/oldagram-square.png',
-      name: 'Oldagram',
-      intro: 'Oldagram is a small clone of Instagram, designed with a similar layout and functionality. The project utilizes JavaScript and DOM manipulation to create an interactive user interface.',
-      description: 'It showcases a collection of posts, each consisting of a user"s name, username, location, avatar, post image, comment, and number of likes. The likes count is displayed dynamically, and users can increment the likes by clicking on the "increment" button or the heart icon. The project leverages event listeners to update the likes count and reflect the changes in real-time.', 
-      techStack: 'JavaScript, DOM manipulation, HTML, CSS.',
+      name: "Oldagram",
+      intro: "A compact Instagram clone replicating the layout and interactive functionality of the original platform.",
+      description: "Displays posts with user details, avatars, images, and likes. Interactive features include dynamic like counts updated via event listeners, creating a real-time experience for users.",
+      techStack: "JavaScript, HTML, CSS, DOM Manipulation",
       liveLink: 'https://oldogram.netlify.app/',
       githubLink: 'https://github.com/kamlesh-21/Oldagram',
     },
     {
       id: 6,
       image: '../img/tenzies.jpg',
-      name: 'Tenzies',
-      intro: 'Tenzies is a dice game built using React. The objective of the game is to roll the dice until all of them show the same value.',
-      description: 'The game features a dynamic user interface with dice that can be held or released to freeze their current value between rolls. The game tracks the number of rolls taken and displays the best score achieved so far, as well as the last score. Users have the option to clear the stored scores. The game also includes a visual effect of confetti when the player achieves "tenzies" (all dice showing the same value)', 
-      techStack: 'React, React hooks, nanoid, react-confetti',
+      name: "Tenzies",
+      intro: "A fun dice game where players aim to roll all dice to the same number with minimal attempts.",
+      description: "Features a dynamic UI to hold or release dice, tracking rolls and scores. Confetti animations celebrate wins, and users can clear previous scores for new challenges.",
+      techStack: "React, React Hooks, nanoid, react-confetti",
       liveLink: 'https://sweet-belekoy-83486a.netlify.app/',
       githubLink: 'https://github.com/kamlesh-21/Tenzies_Game',
     },
     {
       id: 7,
       image: '../img/password-generator.jpg',
-      name: 'Password Generator',
-      intro: 'The Password Generator is a JavaScript-based tool that generates random passwords. It utilizes an array of characters containing uppercase and lowercase letters, numbers, and special symbols.',
-      description: 'The tool allows users to generate two random passwords simultaneously, which are displayed in separate boxes on the webpage. Each password consists of 15 characters randomly selected from the available character set. The generated passwords can be used for various purposes, such as creating strong and secure passwords for online accounts.', 
-      techStack: ' JavaScript, HTML, CSS.',
+      name: "Password Generator",
+      intro: "A tool to generate secure, random passwords using a mix of letters, numbers, and symbols.",
+      description: "Users can create two passwords of 15 characters each simultaneously. The interface dynamically displays results, ensuring convenience for creating strong credentials.",
+      techStack: "JavaScript, HTML, CSS",
       liveLink: 'https://sage-kleicha-673556.netlify.app/',
       githubLink: 'https://github.com/kamlesh-21/Random_Password_Generator_2',
     },
     {
       id: 8,
       image: '../img/meme-generator.jpg',
-      name: 'Meme Generator',
-      intro: 'The Meme Generator is a React-based application that allows users to generate custom memes by adding text to a random image fetched from an API.',
-      description: 'The application features two input fields for entering the top and bottom text of the meme. By clicking the "Get a new Meme Image" button, a random image is fetched from the Imgflip API and displayed alongside the entered text. Users can update the text inputs and generate new meme combinations by clicking the button again. The generated memes can be humorous, satirical, or creative, depending on the user"s input.', 
-      techStack: ' React, JavaScript, HTML, CSS, Imgflip API',
+      name: "Meme Generator",
+      intro: "Create custom memes by adding text to random images fetched from the Imgflip API.",
+      description: "Users enter top and bottom text, and the app fetches a random image to overlay the text. Memes update interactively with every input or click, encouraging creativity and humor.",
+      techStack: "React, Imgflip API, JavaScript, HTML, CSS",
       liveLink: 'https://vermillion-souffle-8b93ed.netlify.app/',
       githubLink: 'https://github.com/kamlesh-21/Meme-Generator',
     },
     {
       id: 9,
       image: '../img/personal_dashboard.jpg',
-      name: 'Personal Dashboard',
-      intro: 'The Personal Dashboard is a web application that provides a personalized dashboard experience to users. The application uses the Fetch API to make API requests and handle the responses asynchronously.',
-      description: 'It fetches data from Unsplash API, CoinGecko API, OpenWeatherMap API, Geolocation API to display dynamic content such as a random nature image from Unsplash as the background, the author of the image, real-time cryptocurrency data (specifically for Dogecoin), the current time, and the weather information based on the user"s geolocation.  It also handles errors gracefully and provides default data or fallbacks in case of any issues with the API requests', 
-      techStack: 'JavaScript, HTML, CSS, Fetch API',
+      name: "Personal Dashboard",
+      intro: "A customizable dashboard displaying weather, crypto data, images, and time based on user preferences.",
+      description: "Fetches data from APIs like Unsplash, CoinGecko, and OpenWeatherMap. The app updates content dynamically and handles API errors gracefully, offering a seamless user experience.",
+      techStack: "JavaScript, Fetch API, HTML, CSS",
       liveLink: 'https://fluffy-clafoutis-cf081f.netlify.app/',
       githubLink: 'https://github.com/kamlesh-21/dashboard',
     },
     {
       id: 10,
       image: '../img/xpace.jpg',
-      name: 'Corp Tech Consulting Site',
-      intro: 'This project was crafted for Xpace, an IT and business consulting firm specializing in innovative digital solutions in technology, marketing, and scalability to thrive in a dynamic market.',
-      description: 'This React project implements a modern web application with a responsive navigation system and routing powered by react-router-dom. It features a clean and scalable architecture, integrating pages such as Home, About Us, Services, and Tech Talks, alongside dynamic elements like a product catalog and an AI-powered Superbot. With FontAwesome for icons and structured component organization, the project delivers a seamless user experience.', 
-      techStack: 'React, JavaScript, HTML, CSS',
+      name: "Corp Tech Consulting Site",
+      intro: "A modern site for showcasing IT and business consulting services, designed for scalability and engagement.",
+      description: "Developed with React and react-router-dom for smooth navigation, featuring pages like Home, Services, and Tech Talks. The site integrates dynamic elements like product catalogs and AI-powered chatbots for enhanced user interaction.",
+      techStack: "React, JavaScript, HTML, CSS",
       liveLink: 'https://xpace.netlify.app/',
       githubLink: 'https://github.com/kamlesh-21/Corporate_Website',
     },
     {
       id: 11,
       image: '../img/color-picker.jpg',
-      name: 'Color Scheme Generator',
-      intro: 'The Color Scheme Generator is a web application that generates a color scheme based on a user-selected color and scheme type. ',
-      description: ' The application uses an HTML form with a color picker and scheme selection dropdown. unction retrieves the user-selected color and scheme type from the form inputs. It then makes a GET request to thecolorapi.com, passing the selected color and scheme type as parameters. The API returns a set of colors that match the provided scheme type, based on the selected color. The returned colors are stored in an array, and the function loops over each color to generate HTML elements dynamically. Each color is displayed as a colored shape with its corresponding hexadecimal value.', 
-      techStack: 'JavaScript, HTML, CSS, Fetch API, thecolorapi.com API.',
+      name: "Color Scheme Generator",
+      intro: "Generate color schemes based on user-selected colors and scheme types using API integrations.",
+      description: "The app uses a color picker and dropdown to fetch matching color schemes from thecolorapi.com. Results display dynamically as colored shapes with hexadecimal values for easy reference.",
+      techStack: "JavaScript, HTML, CSS, Fetch API, thecolorapi.com",
       liveLink: 'https://rainbow-biscuit-c760c0.netlify.app/',
       githubLink: 'https://github.com/kamlesh-21/Color-Scheme-Generator',
     },
     {
       id: 12,
       image: '../img/restaurant-menu.jpg',
-      name: 'Food Ordering Site',
-      intro: 'The Food Ordering Site is an online platform that allows users to browse and order various food items. Users can view the menu, add items to their order, and complete the checkout process. The site provides a user-friendly interface to select food items, track the order, and make payments. ',
-      description: ' The Food Ordering Site offers a diverse menu of delicious food items. Users can add items to their order with the ability to increase or decrease quantities. The site dynamically updates the order total and displays the selected items for review. Upon completing the order, users receive a confirmation message with the estimated delivery time.', 
-      techStack: 'JavaScript, HTML, CSS, Fetch API, event listeners, DOM manipulation',
+      name: "Food Ordering Site",
+      intro: "An online platform for browsing menus, ordering food, and tracking orders with ease.",
+      description: "Users can add or remove items from their cart, with real-time order total updates. The platform provides a smooth checkout experience and confirms delivery times.",
+      techStack: "JavaScript, HTML, CSS, DOM Manipulation, Fetch API",
       liveLink: 'https://order-food-items.netlify.app/',
       githubLink: 'https://github.com/kamlesh-21/Food-Ordering-Site',
     },
     {
       id: 13,
       image: '../img/twitter.jpg',
-      name: 'Twitter Frontend Clone',
-      intro: 'The Twitter Frontend Clone is a web application that replicates the user interface and functionality of Twitter. Users can view a feed of tweets, interact with them by liking, retweeting, and replying, as well as post their own tweets.',
-      description: 'The Twitter Frontend Clone offers a seamless experience of browsing tweets and engaging with the content. Users can like tweets, retweet them, and view replies. The clone also enables users to compose and post their own tweets, contributing to the interactive and dynamic nature of the platform. The clone provides a familiar and intuitive interface that resembles the core features of Twitter', 
-      techStack: 'JavaScript, HTML, CSS, Fetch API, uuid ',
+      name: "Twitter Frontend Clone",
+      intro: "A frontend replica of Twitter allowing users to view, post, and interact with tweets.",
+      description: "Mimics Twitter functionality, including liking, retweeting, and replying. Features a clean interface for seamless navigation and engaging user experiences.",
+      techStack: "JavaScript, React, HTML, CSS",
       liveLink: 'https://helpful-panda-1d5db6.netlify.app/',
       githubLink: 'https://github.com/kamlesh-21/twitter_clone',
     },
     {
       id: 14,
       image: '../img/tagurl.png',
-      name: 'TagURL - Browser Extension',
-      intro: 'The TagURL project allows users to save and organize their favorite website URLs along with associated tags. It provides a simple interface to save URLs, add tags, and remove saved entries. Users can also delete all saved data at once.',
-      description: 'The project is built as a browser extension using HTML, CSS, and JavaScript. It leverages the Chrome Extension API (chrome.tabs.query) to capture the active tab"s URL and the user"s input for the associated tag. The saved URL and tag are stored as an object in the myLeads array, which is then stored in the browser"s local storage using localStorage.setItem(). The saved entries are rendered on the page, displaying the URL, tag, and a remove button for each entry. Users can remove individual entries by clicking the "Remove" button, which updates the myLeads array and local storage accordingly. Additionally, users can delete all saved data by double-clicking the "Delete All" button.', 
-      techStack: 'JavaScript, HTML, CSS, Chrome Extension API',
+      name: "TagURL - Browser Extension",
+      intro: "A browser extension to save and organize favorite website URLs with associated tags for better accessibility.",
+      description: "Built as a browser extension using HTML, CSS, and JavaScript, this tool leverages the Chrome Extension API (chrome.tabs.query) to capture active tab URLs and user inputs for tags. Saved URLs and tags are stored as objects in an array and managed through local storage. Users can view, delete individual entries, or clear all saved data through a user-friendly interface.",
+      techStack: "JavaScript, HTML, CSS, Chrome Extension API",
       liveLink: 'https://helpful-panda-1d5db6.netlify.app/',
       githubLink: 'https://github.com/kamlesh-21/TagURL',
     },
     {
       id: 15,
       image: '../img/movie_watchlist.jpg',
-      name: 'Movie Watchlist',
-      intro: 'This Movie Watchlist project allows users to search for movies using the Open Movie Database (OMDb) API and add them to their watchlist. It provides information about the movies such as title, poster, IMDb rating, runtime, genre, and plot. Users can add movies to their watchlist and remove them if desired.',
-      description: 'The project is built using HTML, CSS, and JavaScript. It utilizes the OMDb API to fetch movie data based on user search input. The fetched movie data is then stored in the moviesArray and rendered on the page. The user can add movies to their watchlist by clicking the "Add to Watchlist" button, and the movie is stored in the watchlistArray and in the browser"s local storage. If a movie is already in the watchlist, the user is alerted with a message. The user can also remove movies from the watchlist by clicking the "Remove from Watchlist" button, which updates the watchlistArray and local storage accordingly.', 
-      techStack: 'JavaScript, HTML, CSS, OMDb API API ',
+      name: "Movie Watchlist",
+      intro: "A tool for creating a personalized watchlist by searching and saving movies from the OMDb API.",
+      description: "This project enables users to search for movies via the OMDb API and add them to their watchlist. Movie details such as title, poster, IMDb rating, runtime, genre, and plot are displayed dynamically. Users can manage their watchlist, with options to add, remove, or alert duplicates, all while leveraging local storage for persistence.",
+      "techStack": "JavaScript, HTML, CSS, OMDb API",
       liveLink: 'https://remarkable-7d47ea.netlify.app/',
       githubLink: 'https://github.com/kamlesh-21/Movie_Watchlist',
     },
     {
       id: 16,
       image: '../img/learning_journal.jpg',
-      name: 'Learning Journal',
-      intro: 'portfolio styled journal replete with blogs and portfolio',
-      description: ' The HTML structure consists of a head section containing the document title, CSS stylesheets, and fonts. The body section includes a header with a navigation menu, a featured article with an image, title, and content, and a main section with recent articles displayed in a container. The main section also includes a sidebar with widgets displaying information about the author and projects. Finally, a footer is present at the bottom of the page with copyright information.', 
-      techStack: ' HTML, CSS,  Google Fonts (Quicksand), static web pages.',
+      name: "Learning Journal",
+      intro: "A portfolio-styled journal combining blogs and project showcases.",
+      description: "The static website structure includes a header with navigation, a featured article, and a main section displaying recent articles and a sidebar. Widgets showcase author information and projects, while a footer provides copyright details. Styled with CSS and Google Fonts, it offers a clean, professional look.",
+      techStack: "HTML, CSS, Google Fonts (Quicksand)",
       liveLink: 'https://learning-journal-aside.netlify.app/',
       githubLink: 'https://github.com/kamlesh-21/my-learning-journal',
     },
@@ -349,13 +354,18 @@ const App = () => {
     <div className="min-h-screen bg-gray-100 font-sans text-gray-800">
       <header className="fixed top-0 left-0 w-full bg-blue-900 text-white z-50">
         <nav className="container mx-auto flex justify-between items-center p-4">
-          <div className="text-2xl font-bold">Kamlesh Kumar
+        <div 
+          className="text-2xl font-bold cursor-pointer hover:text-yellow-400 transition duration-300"
+          onClick={scrollToTop}
+        >
+          Kamlesh Kumar
+          {/* Uncomment if you want to use an image */}
           {/* <img
-                src="./img/kamnlesh2.png" 
-                alt="Kamlesh Kumar"
-                className="h-18 object-fill"
+              src="./img/kamnlesh2.png"
+              alt="Kamlesh Kumar"
+              className="h-18 object-fill group-hover:opacity-80 group-hover:scale-105 transition duration-300"
             /> */}
-            </div>
+        </div>
 
           {/* Mobile Menu Toggle */}
           <div
@@ -487,22 +497,25 @@ const App = () => {
 
         {/* Professional Experience Section */}
         <section id="experience" className="mb-12">
-          <h2 className="text-3xl font-bold text-center mb-8 text-blue-900">Professional Experience</h2>
-          {professionalExperience.map((job, index) => (
-            <div key={index} className="bg-white p-6 rounded-lg shadow-md mb-6">
-              <h3 className="text-2xl font-semibold text-blue-800 mb-2">{job.title}</h3>
-              <p className="mb-2">
-                <span className="text-lg font-medium text-gray-800">{job.company}</span> 
-                <span className="text-gray-600"> | {job.period}</span>
-            </p>
-            <ul className="list-disc list-inside text-gray-700">
-                {job.responsibilities.map((resp, i) => (
-                  <li key={i}>{resp}</li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </section>
+  <h2 className="text-3xl font-bold text-center mb-8 text-blue-900">Professional Experience</h2>
+  {professionalExperience.map((job, index) => (
+    <div key={index} className="bg-white p-6 rounded-lg shadow-md mb-6">
+      <h3 className="text-2xl font-semibold text-blue-800 mb-2">{job.title}</h3>
+      <p className="mb-2 flex items-center">
+        {/* Add company logo if available */}
+        <img src={job.image} alt={job.company} className="w-6 h-6 mr-2" />
+        <span className="text-lg font-medium text-gray-800 mr-2">{job.company}</span>
+        <span className="text-gray-600"> | {job.period}</span>
+      </p>
+      <ul className="list-disc list-inside space-y-1 text-gray-700">
+        {job.responsibilities.map((task, i) => (
+          <li key={i}>{task}</li>
+        ))}
+      </ul>
+    </div>
+  ))}
+</section>
+
 
         {/* Education Section */}
         <section id="education" className="mb-12">
@@ -574,88 +587,10 @@ const App = () => {
             ))}
         </div>
         </section>
-        {/* <section id="contact" className="bg-blue-700 text-white p-12 rounded-lg shadow-lg mb-8">
-  <h2 className="text-3xl font-bold mb-4 text-center">Contact</h2> */}
-  {/* <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto"> */}
-
-    {/* Contact Details */}
-    {/* <div className="w-full">
-      {/* <p className="text-xl mb-4">Feel free to reach out!</p>
-      <p className="text-lg mb-4">Mobile: <span className="font-bold">+91 1234567890</span></p>
-      <p className="text-lg mb-4">Email: <span className="font-bold">kamlesh@example.com</span></p>
-      <p className="text-lg">
-        For a more detailed discussion, visit our <a href="https://calendly.com" className="text-yellow-400">Calendly link</a> to schedule a free consultation!
-      </p>
-    </div> */}
-  <section id="contact">
-  <ContactForm />
-  </section>
-    {/* <form 
-      action="https://formspree.io/f/{your-form-id}" 
-      method="POST" 
-      className="w-full bg-white p-8 rounded-lg shadow-md"
-    >
-      <div className="mb-4">
-        <label htmlFor="name" className="block text-gray-700 font-semibold">Name</label>
-        <input 
-          id="name" 
-          type="text" 
-          name="name" 
-          className="w-full p-3 border border-gray-300 rounded-lg" 
-          placeholder="Your Name" 
-          required
-        />
-      </div>
-
-      <div className="mb-4">
-        <label htmlFor="email" className="block text-gray-700 font-semibold">Email</label>
-        <input 
-          id="email" 
-          type="email" 
-          name="email" 
-          className="w-full p-3 border border-gray-300 rounded-lg" 
-          placeholder="Your Email" 
-          required
-        />
-      </div>
-
-      <div className="mb-4">
-        <label htmlFor="phone" className="block text-gray-700 font-semibold">Phone (optional)</label>
-        <input 
-          id="phone" 
-          type="text" 
-          name="phone" 
-          className="w-full p-3 border border-gray-300 rounded-lg" 
-          placeholder="Your Phone (optional)" 
-        />
-      </div>
-
-      <div className="mb-4">
-        <label htmlFor="message" className="block text-gray-700 font-semibold">Message</label>
-        <textarea 
-          id="message" 
-          name="message" 
-          rows="4" 
-          className="w-full p-3 border border-gray-300 rounded-lg" 
-          placeholder="Your Message" 
-          required
-        ></textarea>
-      </div>
-
-      <button 
-        type="submit" 
-        className="w-full bg-yellow-500 text-blue-900 py-3 rounded-lg font-semibold hover:bg-yellow-600"
-      >
-        Send Message
-      </button>
-    </form> */}
-  {/* </div> */}
-{/* </section> */}
-
-
-
+        <section id="contact">
+          <ContactForm />
+        </section>
       </main>
-
       {/* Go to Top Button */}
       {showGoToTop && (
         <button
