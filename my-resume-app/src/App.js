@@ -193,13 +193,13 @@ const App = () => {
     },
     {
       id: 2,
-      image: '../img/mid3a.png',
+      image: '../img/genai.jpg',
       name: "AI Image Generation App",
       intro: "A text-to-image generation app that turns creative ideas into visually stunning outputs using advanced AI models.",
       description: "Built with React for interactive UI, the app integrates Hugging Face models for high-quality image generation. AI pipelines process inputs efficiently, ensuring scalability and reliability for creative users. Ideal for transforming text prompts into visuals seamlessly.",
       techStack: "React, Hugging Face, AI Models",
-      liveLink: 'https://tryphoto.netlify.app',
-      githubLink: 'https://github.com/kamlesh-21/ai-image-gen'
+      liveLink: 'https://tryphoto.netlify.app/',
+      githubLink: 'https://github.com/kamlesh-21/capex'
     },
     {
       id: 3,
