@@ -31,13 +31,6 @@ const App = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  // const downloadResume = () => {
-  //   const link = document.createElement('a');
-  //   link.href = 'assets/Kamlesh_Kumar_Resume.pdf';
-  //   link.download = 'Kamlesh_Kumar_Resume.pdf';
-  //   link.click();
-  // };
-
   const skills = {
     technical: [
       { 
@@ -352,43 +345,40 @@ const App = () => {
 
   return (
     <div className="min-h-screen bg-gray-100 font-sans text-gray-800">
-      <header className="fixed top-0 left-0 w-full bg-blue-900 text-white z-50">
-        <nav className="container mx-auto flex justify-between items-center p-4">
+    <header className="fixed top-0 left-0 w-full bg-blue-900 text-white z-50">
+      <nav className="container mx-auto flex justify-between items-center p-4">
         <div 
           className="text-2xl font-bold cursor-pointer hover:text-yellow-400 transition duration-300"
           onClick={scrollToTop}
         >
           Kamlesh Kumar
-          {/* Uncomment if you want to use an image */}
-          {/* <img
-              src="./img/kamnlesh2.png"
-              alt="Kamlesh Kumar"
-              className="h-18 object-fill group-hover:opacity-80 group-hover:scale-105 transition duration-300"
-            /> */}
         </div>
 
-          {/* Mobile Menu Toggle */}
-          <div
-            className="md:hidden cursor-pointer"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          >
-            <div className="space-y-1.5">
-              <div className="w-6 h-0.5 bg-white"></div>
-              <div className="w-6 h-0.5 bg-white"></div>
-              <div className="w-6 h-0.5 bg-white"></div>
-            </div>
+        {/* Mobile Menu Toggle */}
+        <div
+          className="md:hidden cursor-pointer mr-4" // Added margin-right
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+        >
+          <div className="space-y-1.5">
+            <div className="w-6 h-0.5 bg-white"></div>
+            <div className="w-6 h-0.5 bg-white"></div>
+            <div className="w-6 h-0.5 bg-white"></div>
           </div>
+        </div>
 
-          {/* Navigation Links */}
-          <ul
-            className={`md:flex space-x-4 ${
-              isMobileMenuOpen
-                ? 'absolute top-full left-0 w-full bg-blue-900 flex flex-col items-center py-4'
-                : 'hidden md:flex'
-            }`}
-          >
+        {/* Navigation Links */}
+        <ul
+          className={`md:flex space-x-4 ${
+            isMobileMenuOpen
+              ? 'absolute top-full left-0 w-full bg-blue-900 flex flex-col items-center py-4'
+              : 'hidden md:flex'
+          }`}
+        >
           {['Education', 'Skills', 'Experience', 'Projects', 'Contact'].map((section) => (
-            <li key={section} className="hover:text-yellow-400 transition">
+            <li 
+              key={section} 
+              className="hover:text-yellow-400 transition my-2 md:my-0" // Added vertical margin for mobile
+            >
               <button
                 onClick={() => {
                   const element = document.getElementById(section.toLowerCase());
@@ -399,6 +389,9 @@ const App = () => {
                     top,
                     behavior: 'smooth',
                   });
+                  
+                  // Close mobile menu after selection
+                  setIsMobileMenuOpen(false);
                 }}
                 className="focus:outline-none"
               >
@@ -411,57 +404,65 @@ const App = () => {
     </header>
 
     <main className="container mx-auto mt-20 p-4">
-    {/* About Section */}
-    <section id="about" className="flex items-center bg-blue-700 text-white p-12 rounded-lg shadow-lg mb-8">
-        {/* Left Side: Image */}
-        <div className="w-1/4 flex justify-center">
-            <img
-                src="./img/kamleshkumar_three.png" // Replace with your image path
-                alt="Kamlesh Kumar"
-                className="rounded-full w-42 h-48 object-fill shadow-lg border-4 border-yellow-300"
-            />
+      {/* About Section - Improved Mobile Responsiveness */}
+      <section 
+        id="about" 
+        className="flex flex-col md:flex-row items-center bg-blue-700 text-white p-6 md:p-12 rounded-lg shadow-lg mb-8"
+      >
+        {/* Image - Centered and full width on mobile */}
+        <div className="w-full md:w-1/4 flex justify-center mb-6 md:mb-0">
+          <img
+            src="./img/kamleshkumar_three.png"
+            alt="Kamlesh Kumar"
+            className="rounded-full w-42 h-48 object-fill shadow-lg border-4 border-yellow-300"
+          />
         </div>
 
-        {/* Right Side: Content */}
-        <div className="w-3/4 text-center lg:text-left">
-            <h1 className="text-4xl font-bold mb-2">Kamlesh Kumar</h1>
-            <h2 className="text-xl mb-4 text-yellow-300">Sales & Operations Leader | Full Stack Developer</h2>
-            <p className="max-w-xl mx-auto lg:mx-0 mb-6">
-                Accomplished professional with 18+ years of experience in driving P&L growth, client onboarding, and B2B sales across multiple sectors, with technical expertise in MERN stack and generative AI.
-            </p>
+        {/* Content - Centered and full width on mobile */}
+        <div className="w-full md:w-3/4 text-center lg:text-left">
+          <h1 className="text-3xl md:text-4xl font-bold mb-2">Kamlesh Kumar</h1>
+          <h2 className="text-lg md:text-xl mb-4 text-yellow-300">
+            Sales & Operations Leader | Full Stack Developer
+          </h2>
+          <p className="max-w-xl mx-auto lg:mx-0 mb-6 text-sm md:text-base">
+            Accomplished professional with 18+ years of experience in driving P&L growth, 
+            client onboarding, and B2B sales across multiple sectors, with technical 
+            expertise in MERN stack and generative AI.
+          </p>
 
-            <div className="flex justify-center lg:justify-start space-x-4">
-                {/* Download Resume Button */}
-                <a
-                  href="/Kamlesh_Kumar_Resume1.docx" // Replace "resume.docx" with the actual name of your resume file in the public folder
-                  download
-                  className="bg-yellow-500 text-blue-900 px-4 py-2 rounded flex items-center hover:bg-yellow-600"
-                >
-                  <Download className="mr-2" /> Download Resume
-                </a>
+          {/* Buttons - Stacked on mobile, centered */}
+          <div className="flex flex-col sm:flex-row justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
+            {/* Download Resume Button */}
+            <a
+              href="/Kamlesh_Kumar_Resume1.docx"
+              download
+              className="bg-yellow-500 text-blue-900 px-4 py-2 rounded flex items-center justify-center hover:bg-yellow-600"
+            >
+              <Download className="mr-2" /> Download Resume
+            </a>
 
-                {/* LinkedIn Link */}
-                <a
-                    href="https://www.linkedin.com/in/kamlesh21/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-blue-800 px-4 py-2 rounded flex items-center hover:bg-blue-700"
-                >
-                    <Linkedin className="mr-2" /> LinkedIn
-                </a>
+            {/* LinkedIn Link */}
+            <a
+              href="https://www.linkedin.com/in/kamlesh21/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-blue-800 px-4 py-2 rounded flex items-center justify-center hover:bg-blue-700"
+            >
+              <Linkedin className="mr-2" /> LinkedIn
+            </a>
 
-                {/* GitHub Link */}
-                <a
-                    href="https://github.com/kamlesh-21"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-gray-800 px-4 py-2 rounded flex items-center hover:bg-gray-700"
-                >
-                    <Github className="mr-2" /> GitHub
-                </a>
-            </div>
+            {/* GitHub Link */}
+            <a
+              href="https://github.com/kamlesh-21"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-gray-800 px-4 py-2 rounded flex items-center justify-center hover:bg-gray-700"
+            >
+              <Github className="mr-2" /> GitHub
+            </a>
+          </div>
         </div>
-    </section>
+      </section>
 
     {/* Skills Section */}
     <section id="skills" className="mb-12">
@@ -497,24 +498,31 @@ const App = () => {
 
         {/* Professional Experience Section */}
         <section id="experience" className="mb-12">
-  <h2 className="text-3xl font-bold text-center mb-8 text-blue-900">Professional Experience</h2>
-  {professionalExperience.map((job, index) => (
-    <div key={index} className="bg-white p-6 rounded-lg shadow-md mb-6">
-      <h3 className="text-2xl font-semibold text-blue-800 mb-2">{job.title}</h3>
-      <p className="mb-2 flex items-center">
-        {/* Add company logo if available */}
-        <img src={job.image} alt={job.company} className="w-6 h-6 mr-2" />
-        <span className="text-lg font-medium text-gray-800 mr-2">{job.company}</span>
-        <span className="text-gray-600"> | {job.period}</span>
-      </p>
-      <ul className="list-disc list-inside space-y-1 text-gray-700">
-        {job.responsibilities.map((task, i) => (
-          <li key={i}>{task}</li>
-        ))}
-      </ul>
-    </div>
-  ))}
-</section>
+          <h2 className="text-3xl font-bold text-center mb-8 text-blue-900">Professional Experience</h2>
+          {professionalExperience.map((job, index) => (
+            <div key={index} className="bg-white p-6 rounded-lg shadow-md mb-6">
+              <div className="flex flex-col md:flex-row items-start md:items-center mb-2">
+                <div className="flex items-center mb-2 md:mb-0">
+                  <img 
+                    src={job.image} 
+                    alt={job.company} 
+                    className="w-6 h-6 mr-2" 
+                  />
+                  <h3 className="text-xl md:text-2xl font-semibold text-blue-800">{job.title}</h3>
+                </div>
+              </div>
+              <div className="flex flex-col md:flex-row justify-between mb-2">
+                <span className="text-lg font-medium text-gray-800">{job.company}</span>
+                <span className="text-gray-600">{job.period}</span>
+              </div>
+              <ul className="list-disc list-inside space-y-1 text-gray-700">
+                {job.responsibilities.map((task, i) => (
+                  <li key={i}>{task}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </section>
 
 
         {/* Education Section */}
@@ -602,8 +610,25 @@ const App = () => {
         </button>
       )}
 
-      <footer className="text-center py-4 bg-blue-900 text-white">
-        <p>&copy; 2024 Kamlesh Kumar | All Rights Reserved</p>
+      <footer className="text-center py-6 bg-blue-900 text-white">
+        <div className="container mx-auto px-4">
+          <p className="mb-2">&copy; 2024 Kamlesh Kumar | All Rights Reserved</p>
+          
+          <div className="mt-4">
+            <h4 className="font-semibold mb-2">Tech Stack</h4>
+            <div className="flex flex-wrap justify-center gap-3">
+              <span className="bg-blue-700 px-3 py-1 rounded-full text-sm">React</span>
+              <span className="bg-blue-700 px-3 py-1 rounded-full text-sm">Tailwind CSS</span>
+              <span className="bg-blue-700 px-3 py-1 rounded-full text-sm">React Hooks</span>
+              <span className="bg-blue-700 px-3 py-1 rounded-full text-sm">Formspree</span>
+              <span className="bg-blue-700 px-3 py-1 rounded-full text-sm">Lucide React Icons</span>
+            </div>
+          </div>
+          
+          <div className="mt-4 text-sm text-blue-200">
+            <p>Version: 0.1.0 | Developed with ❤️ using Create React App</p>
+          </div>
+        </div>
       </footer>
     </div>
   );
