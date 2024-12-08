@@ -31,6 +31,15 @@ const App = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  const handleTrackEvent = (action) => {
+    if (window.gtag) {
+      window.gtag('event', action, {
+        event_category: 'User Interaction',
+        event_label: 'Resume Section',
+      });
+    }
+  };
+
   const skills = {
     technical: [
       { 
@@ -436,6 +445,7 @@ const App = () => {
             <a
               href="/Kamlesh_Kumar_Resume1.docx"
               download
+              onClick={() => handleTrackEvent('Resume Download')}
               className="bg-yellow-500 text-blue-900 px-4 py-2 rounded flex items-center justify-center hover:bg-yellow-600"
             >
               <Download className="mr-2" /> Download Resume
@@ -446,6 +456,7 @@ const App = () => {
               href="https://www.linkedin.com/in/kamlesh21/"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => handleTrackEvent('Linkedin Click')}
               className="bg-blue-800 px-4 py-2 rounded flex items-center justify-center hover:bg-blue-700"
             >
               <Linkedin className="mr-2" /> LinkedIn
@@ -456,6 +467,7 @@ const App = () => {
               href="https://github.com/kamlesh-21"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => handleTrackEvent('GitHub Click')}
               className="bg-gray-800 px-4 py-2 rounded flex items-center justify-center hover:bg-gray-700"
             >
               <Github className="mr-2" /> GitHub
